@@ -1,14 +1,9 @@
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@acme/accordion";
 import { Button } from "@acme/button";
-import { CheckIcon } from "@radix-ui/react-icons";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@acme/accordion";
-import { useIsomorphicLayoutEffect } from "@acme/utils";
-import { styled } from "@stitches/react";
 import { Checkbox, CheckboxIndicator } from "@acme/checkbox";
+import { useIsomorphicLayoutEffect } from "@acme/utils";
+import { CheckIcon } from "@radix-ui/react-icons";
+import { styled } from "@stitches/react";
 
 const Flex = styled("div", { display: "flex" });
 const Label = styled("label", {
@@ -32,24 +27,17 @@ export default function Docs() {
       <Accordion type="single" defaultValue="item-1" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger>Is it accessible?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It adheres to the WAI-ARAI design pattern.
-          </AccordionContent>
+          <AccordionContent>Yes. It adheres to the WAI-ARAI design pattern.</AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-2">
           <AccordionTrigger>Is it unstyled?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It's unstyled by default, giving you freedom over the look and
-            feel.
-          </AccordionContent>
+          <AccordionContent>Yes. It's unstyled by default, giving you freedom over the look and feel.</AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-3">
           <AccordionTrigger>Can it be animated?</AccordionTrigger>
-          <AccordionContent>
-            Yes! You can animate the Accordion with CSS or JavaScript.
-          </AccordionContent>
+          <AccordionContent>Yes! You can animate the Accordion with CSS or JavaScript.</AccordionContent>
         </AccordionItem>
       </Accordion>
       <br />

@@ -1,18 +1,18 @@
-import * as React from "react";
-import { styled, keyframes } from "@stitches/react";
-import { violet, blackA, mauve } from "@radix-ui/colors";
-import { ChevronDownIcon } from "@radix-ui/react-icons";
+import { blackA, mauve, violet } from "@radix-ui/colors";
 import {
+  type AccordionContentProps,
+  type AccordionHeaderProps,
+  type AccordionItemProps,
+  type AccordionTriggerProps,
   Content,
   Header,
   Item,
   Root,
   Trigger,
-  type AccordionContentProps,
-  type AccordionHeaderProps,
-  type AccordionItemProps,
-  type AccordionTriggerProps,
 } from "@radix-ui/react-accordion";
+import { ChevronDownIcon } from "@radix-ui/react-icons";
+import { keyframes, styled } from "@stitches/react";
+import * as React from "react";
 
 const slideDown = keyframes({
   from: { height: 0 },
@@ -32,8 +32,8 @@ const StyledAccordion = styled(Root, {
 });
 
 const StyledItem = styled(Item, {
-  overflow: "hidden",
-  marginTop: 1,
+  "overflow": "hidden",
+  "marginTop": 1,
 
   "&:first-child": {
     marginTop: 0,
@@ -59,29 +59,29 @@ const StyledHeader = styled(Header, {
 });
 
 const StyledTrigger = styled(Trigger, {
-  all: "unset",
-  fontFamily: "inherit",
-  backgroundColor: "transparent",
-  padding: "0 20px",
-  height: 45,
-  flex: 1,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  fontSize: 15,
-  lineHeight: 1,
-  color: violet.violet11,
-  boxShadow: `0 1px 0 ${mauve.mauve6}`,
+  "all": "unset",
+  "fontFamily": "inherit",
+  "backgroundColor": "transparent",
+  "padding": "0 20px",
+  "height": 45,
+  "flex": 1,
+  "display": "flex",
+  "alignItems": "center",
+  "justifyContent": "space-between",
+  "fontSize": 15,
+  "lineHeight": 1,
+  "color": violet.violet11,
+  "boxShadow": `0 1px 0 ${mauve.mauve6}`,
   '&[data-state="closed"]': { backgroundColor: "white" },
   '&[data-state="open"]': { backgroundColor: "white" },
   "&:hover": { backgroundColor: mauve.mauve2 },
 });
 
 const StyledContent = styled(Content, {
-  overflow: "hidden",
-  fontSize: 15,
-  color: mauve.mauve11,
-  backgroundColor: mauve.mauve2,
+  "overflow": "hidden",
+  "fontSize": 15,
+  "color": mauve.mauve11,
+  "backgroundColor": mauve.mauve2,
 
   '&[data-state="open"]': {
     animation: `${slideDown} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
@@ -96,33 +96,31 @@ const StyledContentText = styled("div", {
 });
 
 const StyledChevron = styled(ChevronDownIcon, {
-  color: violet.violet10,
-  transition: "transform 300ms cubic-bezier(0.87, 0, 0.13, 1)",
+  "color": violet.violet10,
+  "transition": "transform 300ms cubic-bezier(0.87, 0, 0.13, 1)",
   "[data-state=open] &": { transform: "rotate(180deg)" },
 });
 
 // Exports
 export const Accordion = StyledAccordion;
 export const AccordionItem = StyledItem;
-export const AccordionTrigger = React.forwardRef<
-  HTMLButtonElement,
-  AccordionTriggerProps
->(({ children, ...rest }, forwardedRef) => (
-  <StyledHeader>
-    <StyledTrigger {...rest} ref={forwardedRef}>
-      {children}
-      <StyledChevron aria-hidden />
-    </StyledTrigger>
-  </StyledHeader>
-));
+export const AccordionTrigger = React.forwardRef<HTMLButtonElement, AccordionTriggerProps>(
+  ({ children, ...rest }, forwardedRef) => (
+    <StyledHeader>
+      <StyledTrigger {...rest} ref={forwardedRef}>
+        {children}
+        <StyledChevron aria-hidden />
+      </StyledTrigger>
+    </StyledHeader>
+  )
+);
 AccordionTrigger.displayName = "AccordionTrigger";
 
-export const AccordionContent = React.forwardRef<
-  HTMLDivElement,
-  AccordionContentProps
->(({ children, ...rest }, forwardedRef) => (
-  <StyledContent {...rest} ref={forwardedRef}>
-    <StyledContentText>{children}</StyledContentText>
-  </StyledContent>
-));
+export const AccordionContent = React.forwardRef<HTMLDivElement, AccordionContentProps>(
+  ({ children, ...rest }, forwardedRef) => (
+    <StyledContent {...rest} ref={forwardedRef}>
+      <StyledContentText>{children}</StyledContentText>
+    </StyledContent>
+  )
+);
 AccordionContent.displayName = "AccordionContent";

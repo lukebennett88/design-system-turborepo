@@ -1,12 +1,4 @@
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration
-} from "remix";
-import type { MetaFunction } from "remix";
+import { type MetaFunction, Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "remix";
 
 export const meta: MetaFunction = () => {
   return { title: "New Remix App" };

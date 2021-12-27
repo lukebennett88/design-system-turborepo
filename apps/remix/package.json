@@ -5,8 +5,9 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "postinstall": "remix setup node",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .cache"
+    "lint": "TIMING=1 eslint --fix .",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .cache",
+    "postinstall": "remix setup node"
   },
   "dependencies": {
     "@acme/accordion": "*",
@@ -26,6 +27,7 @@
     "@remix-run/dev": "^1.1.1",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "eslint-preset-acme": "*",
     "typescript": "^4.5.4"
   },
   "engines": {

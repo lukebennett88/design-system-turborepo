@@ -26,7 +26,8 @@ This turborepo has some additional tools already setup for you:
 
 ## Using this example
 
-We do not have a starter yet in `create-turbo` for this quite yet. If you want to use this in the interim, you run the following command:
+We do not have a starter yet in `create-turbo` for this quite yet. If you want to use this in the interim, you run the
+following command:
 
 ```sh
 npx degit vercel/turborepo/examples/design-system design-system
@@ -37,7 +38,8 @@ git init . && git add . && git commit -m "Init"
 
 ### Changing the NPM organization scope
 
-The NPM organization scope for this design system starter is `@acme`. To change this, it's a bit manual at the moment, but you'll need to do the following:
+The NPM organization scope for this design system starter is `@acme`. To change this, it's a bit manual at the moment,
+but you'll need to do the following:
 
 - Rename folders in `packages/*` to replace `acme` with your desired scope
 - Search and replace `acme` with your desired scope
@@ -47,7 +49,8 @@ The NPM organization scope for this design system starter is `@acme`. To change 
 
 #### NPM
 
-If you want to publish package to the public NPM registry and make them publicly available, this is already setup for you.
+If you want to publish package to the public NPM registry and make them publicly available, this is already setup for
+you.
 
 To publish packages to a private NPM organization scope, **remove** the following from each of the `package.json`'s
 
@@ -59,4 +62,5 @@ To publish packages to a private NPM organization scope, **remove** the followin
 
 #### GitHub Package Registry
 
-See [Working with the npm registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#publishing-a-package-using-publishconfig-in-the-packagejson-file)
+See
+[Working with the npm registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#publishing-a-package-using-publishconfig-in-the-packagejson-file)
