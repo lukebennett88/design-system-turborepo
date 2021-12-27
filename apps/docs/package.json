@@ -10,6 +10,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
+    "@acme/accordion": "*",
     "@acme/button": "*",
     "@acme/utils": "*",
     "next": "^12.0.7",
