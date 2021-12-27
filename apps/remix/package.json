@@ -1,0 +1,35 @@
+{
+  "name": "@acme/remix",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "postinstall": "remix setup node",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .cache"
+  },
+  "dependencies": {
+    "@acme/accordion": "*",
+    "@acme/button": "*",
+    "@acme/checkbox": "*",
+    "@acme/utils": "*",
+    "@radix-ui/react-icons": "^1.0.3",
+    "@remix-run/react": "^1.1.1",
+    "@remix-run/serve": "^1.1.1",
+    "@remix-run/vercel": "^1.1.1",
+    "@stitches/react": "^1.2.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.1.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.1.1",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false
+}
