@@ -12,9 +12,11 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "clean": "turbo run clean && rm -rf node_modules",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "postinstall": "manypkg check"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@manypkg/cli": "^0.19.1",
     "eslint": "^8.5.0",
     "prettier": "^2.5.1",
     "turbo": "^1.0.23"
