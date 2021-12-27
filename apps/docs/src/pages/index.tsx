@@ -1,4 +1,4 @@
-import { Button } from "@acme/core";
+import { Button } from "@acme/button";
 import { useIsomorphicLayoutEffect } from "@acme/utils";
 
 export default function Docs() {

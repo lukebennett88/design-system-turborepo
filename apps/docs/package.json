@@ -10,7 +10,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
-    "@acme/core": "*",
+    "@acme/button": "*",
     "@acme/utils": "*",
     "next": "^12.0.7",
     "react": "^17.0.2",
