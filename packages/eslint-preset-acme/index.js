@@ -1,12 +1,7 @@
 module.exports = {
-  extends: ["next", "prettier"],
-  settings: {
-    next: {
-      rootDir: ["./apps/*/", "./packages/*/"],
-    },
-  },
+  extends: ["next/core-web-vitals", "prettier"],
   rules: {
-    "@next/next/no-html-link-for-pages": "off",
     "react/no-unescaped-entities": "off",
   },
+  settings: { next: { rootDir: ["./apps/*/", "./packages/*/"] } },
 };
